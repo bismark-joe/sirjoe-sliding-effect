@@ -168,16 +168,11 @@
 
 	<script type="text/javascript">
 		function run() {
-			var one = $('.one');
-			var two = $('.two');
-			var yel = $('.yel');
-			var blue = $('.blue');
-			var fly = $('.fly');
-			one.animate({"margin-left": "585px"}, 1600).animate({"display": "none"}, 1600);
-			yel.animate({"opacity": 0}, 1200);
-			two.animate({"margin-left": "0px"}, 1600).css('display', 'block');
-			blue.animate({"opacity": 9}, 1200);
-			fly.css('display', 'block').animate({"right": 0}, 600).fadeOut("slow");
+			var one = $('.one').animate({"margin-left": "585px"}, 1600).animate({"display": "none"}, 1600);
+			var yel = $('.yel').animate({"opacity": 0}, 1200);
+			var two = $('.two').animate({"margin-left": "0px"}, 1600).css('display', 'block');
+			var blue = $('.blue').animate({"opacity": 9}, 1200);
+			var fly = $('.fly').css('display', 'block').animate({"right": 0}, 600).fadeOut("slow");
 		}
 		setTimeout(run, 2000);
 	</script>
