@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+	<title>GIF</title>
+	<style type="text/css">
+	body{
+		background: #f0ffff;
+	}
+		.deal{
+			position: absolute;
+			margin: auto;
+			width: 900px;
+			height: 500px;
+			right: 0;
+			left: 0;
+			top: 0;
+			bottom: 0;
+			box-shadow: 2px 2px 4px 4px #ccc;
+			border-radius: 5px;
+			background: #fff;
+			overflow: hidden;
+		}
+		.image{
+			width: 585px;
+			height: 500px;
+			float: left;
+			box-sizing: border-box;
+			overflow: hidden;
+			position: absolute;
+		}
+		.one, .two{
+			position: absolute;
+		}
+		.two{
+			display: none;
+			margin-left: -500px;
+		}
+
+		.write{
+			width: 315px;
+			height: 500px;
+			padding: 15px 30px 0px 30px;
+			background: #fff;
+			float: right;
+			box-sizing: border-box;
+			overflow: hidden;
+		}
+		h4{
+			width: auto;
+			background: ;
+		}
+		ul{
+			width: 10px;
+			height: auto;
+			list-style: none;
+			float: right;
+			position: relative;
+			top: -20px;
+		}
+		li{
+			margin: 0;
+			padding: 1px;
+			line-height: 2px;
+			float: right;
+			font-size: 25px;
+			font-weight: bolder;
+		}
+		h2{
+			margin: 0;
+			padding: 0;
+			line-height: 2px;
+			float: right;
+		}
+		.base{
+			width: 284px;
+			height: 250px;
+			position: absolute;
+			margin: auto;
+			bottom: 80px;
+			padding-right: 18px;
+			box-sizing: border-box;
+			overflow: hidden;
+		}
+		h1{
+			font-size: 53px;
+			line-height: 40px;
+		}
+		p{
+			word-spacing: -2px;
+			font-size: 14px;
+		}
+
+		.code{
+			width: 350px;
+			height: 70px;
+			position: absolute;
+			z-index: 666;
+			bottom: 0;
+			right: 0;
+			box-shadow: 2px 2px 4px 0px #ccc;
+			animation-duration: 6s;
+			padding: 20px 0px 20px 20px;
+			box-sizing: border-box;
+		}
+			.blue{
+				background: #4876FF;
+			}
+			.yel{
+				background: #CD950C;
+			}
+
+		.fly{
+			width: 450px;
+			height: 70px;
+			position: absolute;
+			z-index: 999;
+			background: #4876FF;
+			display: none;
+			bottom: 0;
+			right: 550px;
+			box-shadow: 2px 2px 4px 0px #ccc;
+			animation-duration: 6s;
+			box-sizing: border-box;
+		}
+
+
+	</style>
+</head>
+
+	
+<body>
+	<main class="deal" id="employee-login">
+		<section class="image">
+	 		<img class="one" src="img/yel.jpg" width="100%" height="100%">
+	 		<img class="two" src="img/blue.jpg" width="100%" height="100%">
+      	</section>
+      	<section class="write">
+	 		<h4>Modernist 
+	 			<ul>
+	 				<li>_</li>
+	 				<h2>_</h2>
+	 				<li>_</li>
+	 			</ul>
+	 		</h4>
+	 		<div class="base one">
+	 			<h1>Nordic <br>interiors</h1>
+	 			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+	 			tempor incididunt ut labore et dolore magna.</p>
+	 		</div>
+	 		<div class="base two">
+	 			<h1>Nordic <br>kitchen</h1>
+	 			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+	 			tempor incididunt ut labore et dolore magna.</p>
+	 		</div>
+      	</section>
+      	<div class="code blue">
+      		Learn about scandinavian kitchen <span></span>
+      	</div>
+      	<div class="code yel">
+      		Learn about scandinavian design <span></span>
+      	</div>
+
+      	<div class="fly"></div>
+
+	</main>
+	<script type="text/javascript" src="jquery.js"></script>
+
+	<script type="text/javascript">
+		function run() {
+			var one = $('.one');
+			var two = $('.two');
+			var yel = $('.yel');
+			var blue = $('.blue');
+			var fly = $('.fly');
+			one.animate({"margin-left": "585px"}, 1600).animate({"display": "none"}, 1600);
+			yel.animate({"opacity": 0}, 1200);
+			two.animate({"margin-left": "0px"}, 1600).css('display', 'block');
+			blue.animate({"opacity": 9}, 1200);
+			fly.css('display', 'block').animate({"right": 0}, 600).fadeOut("slow");
+		}
+		setTimeout(run, 2000);
+	</script>
+
+</body>
+</html>
